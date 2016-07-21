@@ -65,9 +65,9 @@ header:
 
 .PHONY:install
 install:
-	$(CP) ./include/$(LIBNAME).h $(INCDIR)/$(LIBNAME).h
-	$(CP) $(LIB_DIR)/$(LIBSTATIC) $(LIBDIR)/$(LIBSTATIC)
-	$(CP) $(LIB_DIR)/$(LIBSHARED) $(LIBDIR)/$(LIBSHARED)
+	@$(CP) ./include/$(LIBNAME).h $(INCDIR)/$(LIBNAME).h
+	@$(CP) $(LIB_DIR)/$(LIBSTATIC) $(LIBDIR)/$(LIBSTATIC)
+	@$(CP) $(LIB_DIR)/$(LIBSHARED) $(LIBDIR)/$(LIBSHARED)
 	@printf $(RED) && echo "<<---- Done install $(shell (date +%H:%M:%S)) --->> "&& printf $(NC);
 
 .PHONY:uninstall
